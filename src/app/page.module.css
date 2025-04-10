@@ -11,7 +11,7 @@
   align-items: center;
   justify-items: center;
   min-height: 100svh;
-  padding: 80px;
+  padding: 0px;
   gap: 64px;
   font-family: var(--font-geist-sans);
 }
@@ -28,10 +28,208 @@
 }
 
 .main {
+  min-height: 100vh;
+    font-family: sans-serif;
+    color: white;
+    padding-top: 0px;
+    /* Space for fixed navbar */
+  }
+  
+  .section {
+    width: 100%;
+    min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+  align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  
+  .heroSection {
+    background-color: black;
+  }
+  
+  .useCasesSection {
+    background-color: #0a0a0a;
+    scroll-behavior: smooth;
+  }
+  
+  .techSection {
+    background-color: #111;
+  }
+  
+  .preorderSection {
+    background-color: #080808;
+  }
+  
+  .sectionContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .heading {
+    font-size: 4rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+  
+  .sectionHeading {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #99ccff;
+    text-shadow: 0 0 15px rgba(153, 204, 255, 0.3);
+    letter-spacing: 0.02em;
+  }
+  
+  .sectionSubtitle {
+    font-size: 1.5rem;
+    color: rgba(153, 204, 255, 0.9);
+    margin-bottom: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(153, 204, 255, 0.8);
+    margin: 1rem 0;
+  }
+  
+  .imageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  
+  .heroImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: block;
+  }
+  
+  .button {
+    margin-top: 2rem;
+    padding: 1.2rem 2.5rem;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #333 0%, #111 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .button:hover {
+    background: linear-gradient(135deg, #444 0%, #222 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .preorderSection .button {
+    background: linear-gradient(135deg, #444 0%, #222 100%);
+  }
+  
+  .preorderSection .button:hover {
+    background: linear-gradient(135deg, #555 0%, #333 100%);
+  }
+  
+  .useCasesGrid,
+  .techFeatures {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+  }
+  
+  .useCase,
+  .techFeature {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .useCase.selected {
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .useCase:hover,
+  .techFeature:hover {
+    transform: translateY(-10px);
+  }
+  
+  .useCase h3,
+  .techFeature h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .useCaseImage {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin: 2.5rem auto;
+    display: block;
+  }
+  
+  .finePrint {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+  
+  @media (max-width: 900px) {
+  
+    .useCasesGrid,
+    .techFeatures {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .heading {
+      font-size: 3rem;
+    }
+  
+    .sectionHeading {
+      font-size: 2.5rem;
+    }
+  
+    .section {
+      padding: 4rem 1rem;
+    }
+  
+    .useCasesGrid,
+    .techFeatures {
+      grid-template-columns: 1fr;
+    }
 }
 
 .main ol {
@@ -164,5 +362,152 @@ a.secondary {
 @media (prefers-color-scheme: dark) {
   .logo {
     filter: invert();
+  }
+}
+
+.useCaseFeatured {
+  display: flex;
+  gap: 2.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: center;
+}
+
+.useCaseFeatured.reversed {
+  flex-direction: row-reverse;
+}
+
+.useCaseFeatured:last-child {
+  border-bottom: none;
+}
+
+.useCaseImageContainer {
+  flex: 0 0 50%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.useCaseImageContainer:hover {
+  transform: translateY(-10px);
+}
+
+.useCaseContent {
+  flex: 0 0 35%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.useCaseContent h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #99ccff;
+  text-shadow: 0 0 10px rgba(153, 204, 255, 0.2);
+}
+
+.useCaseContent p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgba(153, 204, 255, 0.85);
+}
+
+.useCaseFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.useCaseFeature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  color: rgba(153, 204, 255, 0.9);
+}
+
+.useCaseFeature svg {
+  width: 24px;
+  height: 24px;
+  color: #99ccff;
+  filter: drop-shadow(0 0 8px rgba(153, 204, 255, 0.2));
+}
+
+.useCaseFeature span {
+  font-size: 1rem;
+  color: rgba(153, 204, 255, 0.9);
+}
+
+/* Add a subtle hover effect to feature items */
+.useCaseFeature:hover {
+  color: #99ccff;
+  text-shadow: 0 0 8px rgba(153, 204, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Style for any buttons or CTAs */
+.button {
+  color: #99ccff;
+  border: 1px solid rgba(153, 204, 255, 0.3);
+  background: rgba(153, 204, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: rgba(153, 204, 255, 0.15);
+  border-color: rgba(153, 204, 255, 0.5);
+  box-shadow: 0 0 15px rgba(153, 204, 255, 0.2);
+}
+
+@media (max-width: 900px) {
+  .useCaseFeatured {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .useCaseImageContainer {
+    flex: none;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .useCaseContent {
+    flex: none;
+    text-align: center;
+    align-items: center;
+  }
+
+  .useCaseFeatures {
+    align-items: center;
+  }
+
+  .useCaseFeature {
+    justify-content: center;
+  }
+}
+
+.useCaseImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .useCaseFeatured {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .useCaseFeatured.reversed {
+    flex-direction: column;
   }
 }
