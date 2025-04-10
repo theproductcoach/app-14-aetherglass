@@ -38,7 +38,7 @@ export default function Home() {
         className={`${styles.section} ${styles.useCasesSection}`}
       >
         <div className={styles.sectionContent}>
-          <h2 className={styles.sectionHeading}>Use Cases</h2>
+          <h2 className={styles.sectionHeading}>Endless Possibilities</h2>
           <p className={styles.sectionSubtitle}>
             See more. Understand more. Do more.
           </p>
@@ -113,7 +113,7 @@ export default function Home() {
             </div>
 
             <div className={styles.useCaseContent}>
-              <h3>Professional</h3>
+              <h3>Innovation for Industry</h3>
               <p>
                 Enhance your professional capabilities with real-time data
                 access and seamless information overlay during meetings,
@@ -152,7 +152,7 @@ export default function Home() {
                     <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z" />
                     <path d="M7 12h2v5H7zm4-3h2v8h-2zm4-3h2v11h-2z" />
                   </svg>
-                  <span>Live data visualization</span>
+                  <span>Live data visualisation</span>
                 </div>
               </div>
             </div>
@@ -171,7 +171,7 @@ export default function Home() {
             </div>
 
             <div className={styles.useCaseContent}>
-              <h3>Educational</h3>
+              <h3>Learning Reimagined</h3>
               <p>
                 Transform any environment into an interactive learning space
                 with rich, contextual information and immersive educational
@@ -220,7 +220,7 @@ export default function Home() {
       {/* Tech Section */}
       <section id="tech" className={`${styles.section} ${styles.techSection}`}>
         <div className={styles.sectionContent}>
-          <h2 className={styles.sectionHeading}>Technology</h2>
+          <h2 className={styles.sectionHeading}>Visionary Tech</h2>
           <p className={styles.sectionSubtitle}>
             Where innovation meets intuition.
           </p>
@@ -294,7 +294,7 @@ export default function Home() {
             </div>
 
             <div className={styles.useCaseContent}>
-              <h3>AI Processing</h3>
+              <h3>Real-Time AI</h3>
               <p>
                 Powered by cutting-edge neural processing units, AETHERGLASS
                 delivers real-time analysis and insights while ensuring your
@@ -350,7 +350,7 @@ export default function Home() {
             </div>
 
             <div className={styles.useCaseContent}>
-              <h3>Ergonomic Design</h3>
+              <h3>Designed for You</h3>
               <p>
                 Meticulously crafted for all-day comfort, AETHERGLASS combines
                 lightweight materials with customizable fit options to ensure a
