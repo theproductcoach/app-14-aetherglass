@@ -387,8 +387,8 @@ a.secondary {
 
 .useCaseFeatured {
   display: flex;
-  gap: 3.5rem;
-  padding: 2.5rem 0;
+  gap: 1rem;
+  padding: 2rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   align-items: center;
 }
@@ -490,8 +490,8 @@ a.secondary {
 @media (max-width: 900px) {
   .useCaseFeatured {
     flex-direction: column;
-    gap: 2rem;
-    margin: 3rem 0;
+    gap: 1rem;
+    margin: 1rem 0;
   }
 
   .useCaseImageContainer {
@@ -535,11 +535,7 @@ a.secondary {
   .useCaseFeatured.reversed {
     flex-direction: column;
     gap: 2rem;
-    margin: 3rem 0;
-    }
-    
-    .section {
-      padding: 4rem 1.5rem;
+    margin: 1rem 0;
     }
     
     .heroSection {
