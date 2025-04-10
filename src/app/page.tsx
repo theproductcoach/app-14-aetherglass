@@ -406,25 +406,19 @@ export default function Home() {
           <p className={styles.sectionSubtitle}>
             Be among the first to experience the future
           </p>
-
-          <div className={styles.useCaseFeatured}>
-            <div className={styles.preorderContent}>
-              <WaitlistButton />
-              <p className={styles.finePrint}>
-                *Limited spots available for early access.
-              </p>
-            </div>
-
-            <div className={styles.useCaseImageContainer}>
-              <Image
-                src="/preorder.png"
-                alt="AETHERGLASS preorder preview"
-                width={800}
-                height={533}
-                className={styles.useCaseImage}
-              />
-            </div>
+          <div className={styles.imageContainer}>
+            <Image
+              src="/preorder.png"
+              alt="AETHERGLASS preorder preview"
+              width={800}
+              height={533}
+              className={styles.preorderImage}
+            />
           </div>
+          <WaitlistButton />
+          <p className={styles.finePrint}>
+            *Limited spots available for early access.
+          </p>
         </div>
       </section>
     </main>
