@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
+import WaitlistButton from "../components/WaitlistButton";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
             />
           </div>
 
-          <button className={styles.button}>Join the Waitlist</button>
+          <WaitlistButton />
         </div>
       </section>
 
@@ -401,17 +402,29 @@ export default function Home() {
         className={`${styles.section} ${styles.preorderSection}`}
       >
         <div className={styles.sectionContent}>
-          <h2 className={styles.sectionHeading}>Preorder</h2>
-          <p className={styles.description}>
-            Be among the first to experience the future of augmented reality.
-            Limited-time offer for early adopters.
+          <h2 className={styles.sectionHeading}>Join the Future</h2>
+          <p className={styles.sectionSubtitle}>
+            Be among the first to experience the future
           </p>
 
-          <button className={styles.button}>Reserve Your AETHERGLASS</button>
+          <div className={styles.useCaseFeatured}>
+            <div className={styles.preorderContent}>
+              <WaitlistButton />
+              <p className={styles.finePrint}>
+                *Limited spots available for early access.
+              </p>
+            </div>
 
-          <p className={styles.finePrint}>
-            Expected shipping Q1 2026. Fully refundable deposit.
-          </p>
+            <div className={styles.useCaseImageContainer}>
+              <Image
+                src="/preorder.png"
+                alt="AETHERGLASS preorder preview"
+                width={800}
+                height={533}
+                className={styles.useCaseImage}
+              />
+            </div>
+          </div>
         </div>
       </section>
     </main>

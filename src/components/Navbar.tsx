@@ -1,9 +1,16 @@
-import { FC } from "react";
+"use client";
+
+import { FC, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./Navbar.module.css";
 
 const Navbar: FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
@@ -11,14 +18,38 @@ const Navbar: FC = () => {
           <span className={styles.logoText}>AETHERGLASS</span>
         </Link>
 
-        <div className={styles.navLinks}>
-          <Link href="#use-cases" className={styles.navLink}>
+        <button
+          className={`${styles.hamburger} ${isMenuOpen ? styles.active : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div
+          className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}
+        >
+          <Link
+            href="#use-cases"
+            className={styles.navLink}
+            onClick={() => setIsMenuOpen(false)}
+          >
             Use Cases
           </Link>
-          <Link href="#tech" className={styles.navLink}>
+          <Link
+            href="#tech"
+            className={styles.navLink}
+            onClick={() => setIsMenuOpen(false)}
+          >
             Tech
           </Link>
-          <Link href="#preorder" className={styles.navLink}>
+          <Link
+            href="#preorder"
+            className={styles.navLink}
+            onClick={() => setIsMenuOpen(false)}
+          >
             Preorder
           </Link>
         </div>
